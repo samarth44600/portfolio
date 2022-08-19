@@ -1,8 +1,4 @@
-.container {
-  padding: 0 2rem;
-}
-
-.main {
+.howToDiv {
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -10,8 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.heading {
-  font-weight: 10px;
+  > h1 {
+    font-weight: 100;
+  }
 }
