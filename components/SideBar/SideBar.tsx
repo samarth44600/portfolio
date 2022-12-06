@@ -1,38 +1,47 @@
 import React, { useState } from "react";
 import styles from "./SideBar.module.scss";
 import { Icon } from "@iconify/react";
-
+import { useDispatch, useSelector } from "react-redux";
+import { setPage } from "../../redux/slices/pageSlice";
 type Props = {};
 
 const SideBar = (props: Props) => {
-  const [active, setactive] = useState("intro");
+  const activePage = useSelector((state: any) => state.page);
+  const dispatch = useDispatch();
+  console.log(activePage);
 
   return (
     <div className={styles.sidebarDiv}>
       <span
-        className={active == "intro" ? styles.activeList : styles.list}
-        onClick={() => setactive("intro")}
+        className={activePage.page == "intro" ? styles.activeList : styles.list}
+        onClick={() => dispatch(setPage("intro"))}
       >
         <Icon className={styles.activeDot} icon="mdi:dot" />
         Intro
       </span>
       <span
-        className={active == "skills" ? styles.activeList : styles.list}
-        onClick={() => setactive("skills")}
+        className={
+          activePage.page == "skills" ? styles.activeList : styles.list
+        }
+        onClick={() => dispatch(setPage("skills"))}
       >
         <Icon className={styles.activeDot} icon="mdi:dot" />
         Skills
       </span>
       <span
-        className={active == "projects" ? styles.activeList : styles.list}
-        onClick={() => setactive("projects")}
+        className={
+          activePage.page == "projects" ? styles.activeList : styles.list
+        }
+        onClick={() => dispatch(setPage("projects"))}
       >
         <Icon className={styles.activeDot} icon="mdi:dot" />
         Projects
       </span>
       <span
-        className={active == "contact" ? styles.activeList : styles.list}
-        onClick={() => setactive("contact")}
+        className={
+          activePage.page == "contact" ? styles.activeList : styles.list
+        }
+        onClick={() => dispatch(setPage("contact"))}
       >
         <Icon className={styles.activeDot} icon="mdi:dot" />
         Contact
