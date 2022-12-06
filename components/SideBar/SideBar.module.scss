@@ -1,0 +1,38 @@
+.sidebarDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-top: 5rem;
+  padding-right: 1rem;
+
+  .list {
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: all 0.3s ease-in-out;
+
+    .activeDot {
+      display: none;
+    }
+    &:hover {
+      //   font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  .activeList {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    .activeDot {
+      display: block;
+      //   display: inline-block;
+      //   margin-right: 0.5rem;
+    }
+  }
+}
