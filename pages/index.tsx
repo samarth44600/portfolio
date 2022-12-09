@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.heading}>Hello, Hi</h1>
-        <p>Tata Bye</p>
+        <p>Site under Development</p>
       </main>
     </div>
   );
